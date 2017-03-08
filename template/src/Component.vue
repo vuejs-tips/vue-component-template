@@ -27,6 +27,10 @@ export default {
   },
 
   watch: {
+    value (newValue) {
+      this.editableValue = newValue
+    },
+
     editableValue: {
       immediate: true,
       handler (newValue) {
