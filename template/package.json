@@ -9,7 +9,7 @@
     "dist": "vue build ./src/index.js --config ./build.config.js --dist ./dist/ --prod",
     "build": "npm run dist -- --disable-compress",
     "demo:html": "open 'http://localhost:3000/demo/index.html'; serve .",
-    "demo:vue": "vue build ./demo/demo.vue --open"
+    "demo:vue": "vue build ./demo/demo.vue --config ./build.config.js --open"
   },
   "files": [
     "dist/"

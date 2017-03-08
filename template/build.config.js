@@ -2,7 +2,7 @@ const webpack = require.main.require('webpack')
 const {name, version} = require('./package.json')
 
 module.exports = {
-  html: false,
+  html: process.env.NODE_ENV === 'development', // generate html only for development
   webpack: {
     devtool: false, // disable source-map
     output: {
