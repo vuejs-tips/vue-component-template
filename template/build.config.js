@@ -9,6 +9,7 @@ module.exports = {
   webpack: {
     devtool: false, // disable source-map
     output: {
+      publicPath: '.', // generate client.*.js relative to ./demo/index.html
       filename: demo ? undefined : kebabCase(name) + '.js', // my-component.js
       library: demo ? undefined : camelCase(name) // MyComponent
     },
