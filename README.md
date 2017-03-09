@@ -12,9 +12,10 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 $ npm install -g vue-cli
 $ vue init vuejs-tips/vue-component-webpack-template my-component
 $ cd my-component
-$ npm run demo:vue
+$ npm run dev
 $ npm run dist
-$ npm run demo:html
+$ npm run dist:demo
+$ npm run demo:open
 ```
 
 The generated output in ./dist can be used with node and the browser.

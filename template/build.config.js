@@ -1,13 +1,16 @@
 const webpack = require.main.require('webpack')
 const {name, version} = require('./package.json')
 
+const demo = process.env.NODE_ENV === 'development' || process.env.npm_lifecycle_event === 'dist:demo'
+
 module.exports = {
-  html: process.env.NODE_ENV === 'development', // generate html only for development
+  // generate html only for dev and dist:demo
+  html: demo,
   webpack: {
     devtool: false, // disable source-map
     output: {
-      filename: kebabCase(name) + '.js', // my-component.js
-      library: camelCase(name) // MyComponent
+      filename: demo ? undefined : kebabCase(name) + '.js', // my-component.js
+      library: demo ? undefined : camelCase(name) // MyComponent
     },
     plugins: [
       new webpack.DefinePlugin({
